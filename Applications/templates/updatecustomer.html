@@ -7,25 +7,14 @@
         <div class="form">
             <form method="POST" action="">
                 {{form.hidden_tag() }}
-                <table>
-                    <tr>
-                        <td>{{ form.forename.label }}</td>
-                        <td>{{ form.forename }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ form.surname.label }}</td>
-                        <td>{{ form.surname }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ form.email.label }}</td>
-                        <td>{{ form.email }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ form.number.label }}</td>
-                        <td>{{ form.number }}</td>
-                    </tr>
-
-                </table>
+                {{ form.forename.label }} {{ form.forename }}
+                <br>
+                {{ form.surname.label }} {{ form.surname }}
+                <br>
+                {{ form.email.label }} {{ form.email }}
+                <br> 
+                {{ form.number.label }} {{ form.number }}
+                <br>
                 {{ form.submit }}
             </form>
         </div>
