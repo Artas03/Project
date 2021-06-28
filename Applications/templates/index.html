@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+    <div>
+        {% for customer in people %}
+            <form action="{{ url_for('update', id=customer.id) }}">
+            <input type=submit value="Change">
+            </form>
+            <form action="{{ url_for('delete', id=customer.id) }}">
+            <input type=submit value="Delete">
+            </form>
+            <br>
+        {% endfor %}
+    {{ form.submit }}
+    </div>
+{% endblock body_content %}

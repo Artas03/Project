@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Update Form</title>
+    </head>
+    <body>
+        <p><h1>Update Form</h1></p>
+        <div class="form">
+            <form method="POST" action="">
+                {{form.hidden_tag() }}
+                <table>
+                    <tr>
+                        <td>{{ form.make.label }}</td>
+                        <td>{{ form.make }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.model.label }}</td>
+                        <td>{{ form.model }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.year.label }}</td>
+                        <td>{{ form.year }}</td>
+                    </tr>
+                </table>
+                {{ form.submit }}
+            </form>
+        </div>
+    </body>
+</html>
