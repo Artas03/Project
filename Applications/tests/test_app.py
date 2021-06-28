@@ -2,7 +2,7 @@ from flask import url_for
 from flask_testing import TestCase
 
 from Applications import app, db
-from Applications.models import Customers
+from Applications.models import Customers, Maintenance
 from Applications import models, app
 
 class TestBase(TestCase):
@@ -36,6 +36,7 @@ class TestViews(TestBase):
     def test_get_read(self):
         response = self.client.get(url_for('read_vehicle'))
         self.assert200(response, "Could not load read customers page")
+
 
 
 
